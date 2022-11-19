@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма создания пользователя</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <section class="create">
+        <div class="container">
+            
+            <form id="form" method="post" class="form" onsubmit="return checkForm(this)">
+                <h1 class="create__title">
+                    Создание пользователя
+                </h1>
+                <p class="text">Здесь должно быть описание</p>
+
+                <div class="form__field">
+                    <input name="lastname" id="lastname" class="input-lastname" type="text" placeholder="Фамилия *">
+                </div>
+                <div class="form__field">
+                    <input name="name" id="name" class="input-name" type="text" placeholder="Имя *">
+                </div>
+                <div class="form__field">
+                    <input name="middlename" id="middlename" class="input-middlename" type="text" placeholder="Отчество">
+                </div>
+                <div class="form__field">
+                    <input name="date" id="date" class="field-date" type="date" placeholder="Дата рождения *">
+                </div>
+                <div class="form__field">
+                <label class="label-phone" for="phone">Ваш номер телефона: *</label>
+        <input aria-invalid="false" aria-required="true" type="tel" id="phone" name="phone" data-inputmask="'mask': '+7(999) 999-9999'">
+                </div>
+                
+                <div class="form__sex">
+                <input class="checkbox__input" type="radio" id="male" name="sex"/>
+                <label class="checkbox__label" for="male">Муж.</label>
+                <input class="checkbox__input" type="radio" id="female" name="sex"/>
+                <label class="checkbox__label" for="female">Жен.</label>
+            </div>
+
+            <p class="form__group">
+                Группа клиентов*
+            </p>
+            <select class="form__select" name="">
+                <option class="form__dispatcher" data-value="Диспетчер">Диспетчер</option>
+                <option class="form__support" data-value="Техподдержка">Техподдержка</option>
+              </select>
+
+            <div class="form__field address">
+                <input name="city" autocomplete="on" type="text" placeholder="Адрес">
+            </div>
+            <div class="form__check">
+            <input class="address__input-checkbox" type="checkbox" id="sms" value="Не отправлять смс" />
+         <label class="address__label-checkbox" for="sms">Не отправлять СМС</label>
+        </div>
+            <div class="form__btn">
+                <button type="submit" name="submit" value="готово" class="button">Создать</button>
+                <p id="message"></p>
+            </div>
+            </form>
+        
+        </div>
+    </section>
+
+    <script src="node_modules/inputmask/dist/inputmask.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(270deg, #130B3C 0%, #02030A 57.63%);
+    font-family: 'Rubik', sans-serif;
+    color: #fff;
+}
+
+input, select {
+    transition: all 0.5s;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.712);
+}
+
+input:hover, select:hover {
+    box-shadow: 1px 1px 10px 3px rgba(216, 27, 53, 0.705);
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
