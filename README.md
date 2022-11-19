@@ -1,2 +1,2 @@
 # create-user
-<img src="">
+<img src="create-user.jpg">
